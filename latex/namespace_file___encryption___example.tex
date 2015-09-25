@@ -1,0 +1,58 @@
+\hypertarget{namespace_file___encryption___example}{}\section{File\+\_\+\+Encryption\+\_\+\+Example Namespace Reference}
+\label{namespace_file___encryption___example}\index{File\+\_\+\+Encryption\+\_\+\+Example@{File\+\_\+\+Encryption\+\_\+\+Example}}
+
+
+This project is an example of file encryption using Python.  
+
+
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+def \hyperlink{namespace_file___encryption___example_a2f6533da101e38d3c94dbac35ed74ba3}{encrypt\+\_\+file}
+\begin{DoxyCompactList}\small\item\em This function is used to encrypt a file using A\+E\+S (C\+B\+C mode) with the given key. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This project is an example of file encryption using Python. 
+
+In this example, Advanced Encryption Standard (A\+E\+S) from the Crypto library. A\+E\+S uses a 16, 24, or 32-\/byte key to encrypt information. The bigger the key, the better the encryption. In this case, the user must provide the key and input file name including location. Any type of file can be encrypted as far as I have tested.
+
+~\newline
+ Author\+: Mr. Reeses ~\newline
+ Date\+: 9/24/2015 ~\newline
+ Version\+: 1.\+0
+
+~\newline
+ Example of how to type in prompt\+: ~\newline
+ encrypt\+\_\+file(\textquotesingle{}abcde12345f6g7h8\textquotesingle{}, \textquotesingle{}C\+:.txt\textquotesingle{}, \textquotesingle{}C\+:\textquotesingle{}, 4096) 
+
+\subsection{Function Documentation}
+\hypertarget{namespace_file___encryption___example_a2f6533da101e38d3c94dbac35ed74ba3}{}\index{File\+\_\+\+Encryption\+\_\+\+Example@{File\+\_\+\+Encryption\+\_\+\+Example}!encrypt\+\_\+file@{encrypt\+\_\+file}}
+\index{encrypt\+\_\+file@{encrypt\+\_\+file}!File\+\_\+\+Encryption\+\_\+\+Example@{File\+\_\+\+Encryption\+\_\+\+Example}}
+\subsubsection[{encrypt\+\_\+file}]{\setlength{\rightskip}{0pt plus 5cm}def File\+\_\+\+Encryption\+\_\+\+Example.\+encrypt\+\_\+file (
+\begin{DoxyParamCaption}
+\item[{}]{key, }
+\item[{}]{in\+\_\+filename, }
+\item[{}]{out\+\_\+filename = {\ttfamily None}, }
+\item[{}]{chunksize = {\ttfamily 64$\ast$1024}}
+\end{DoxyParamCaption}
+)}\label{namespace_file___encryption___example_a2f6533da101e38d3c94dbac35ed74ba3}
+
+
+This function is used to encrypt a file using A\+E\+S (C\+B\+C mode) with the given key. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em key} & The encryption key -\/ a string that must be either 16, 24 or 32 bytes long. Longer keys are more secure.\\
+\hline
+{\em in\+\_\+filename} & Name of the input file\\
+\hline
+{\em out\+\_\+filename} & If None, \textquotesingle{}$<$in\+\_\+filename$>$.enc\textquotesingle{} will be used.\\
+\hline
+{\em chunksize} & Sets the size of the chunk which the function uses to read and encrypt the file. Larger chunk sizes can be faster for some files and machines. chunksize must be divisible by 16. \begin{DoxyVerb}Check if the user gave an output file name. If not, then
+    assign the new file with the same name as the unencrypted
+    file + '.enc'
+\end{DoxyVerb}
+ \\
+\hline
+\end{DoxyParams}
